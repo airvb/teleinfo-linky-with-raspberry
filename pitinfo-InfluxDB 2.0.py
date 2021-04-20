@@ -8,7 +8,7 @@
 
 # A adapter :
 # url="http://localhost:8086" 
-# Doivent déja être créés via influxdb / data 
+# Doivent déjà être créés via influxdb / data 
 # orga = 
 # bucket = 
 # token = 
@@ -47,7 +47,7 @@ logging.info("Lancement pitinfo..")
 
 # A adapter
 url="http://localhost:8086"
-orga = "oNe"
+orga = "one"
 bucket = "test"
 token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 serveur = "serveur"
