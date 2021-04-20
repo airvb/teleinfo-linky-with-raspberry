@@ -1,0 +1,25 @@
+[Unit]
+Description=Relai pitinfo vers ttyusb21
+After=network-online.target
+
+[Service]
+
+#sudo socat -d -d pty,link=/dev/ttyUSB21,raw,ignoreeof,echo=0 tcp:192.168.88.161:8888
+
+User=root
+Group=root
+
+ExecStart=/usr/bin/socat -d -d pty,link=/dev/ttyUSB21,raw,ignoreeof,echo=0 tcp:192.168.88.161:8888
+
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=240
+Restart=on-failure
+
+RestartSec=5
+# Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+#sudo systemctl enable 
+#sudo systemctl start 
