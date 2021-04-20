@@ -10,7 +10,7 @@ Ajout de 2 services :
 
 pitinfo_socat.service : 
 lecture du flux série
-Ip à adpater :
+Ip à adapter :
 ExecStart=/usr/bin/socat -d -d pty,link=/dev/ttyUSB21,raw,ignoreeof,echo=0 tcp:192.168.xx.xxx:8888
 
 pitinfo.service : 
