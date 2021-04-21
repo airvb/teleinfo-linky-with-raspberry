@@ -3,7 +3,7 @@ Surveiller sa consommation électrique en temps réel avec un compteur Linky et 
 
 Adaptation pour InfluxDB 2.0
 
-Le script verifie que l'organisation et le bucket sont existant, sinon arrêt.
+Le script verifie que l'organisation et le bucket sont existants, sinon arrêt.
 Relance le service socat à chaque lancement.
 
 Ajout de 2 services :
