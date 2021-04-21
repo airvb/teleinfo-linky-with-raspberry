@@ -59,6 +59,17 @@ client = influxdb_client.InfluxDBClient(
   token=token,
   org=orga
 )
+
+# check influx running
+while True:
+    try:
+        rdy = client.ready()
+        break
+    except :
+        print("Oops!  Inluxdb non connectée.")
+        logging.info("Inluxdb non connectée --> ARRET")
+        sys.exit()
+
 influxdb_buckets_api = client.buckets_api()
 influxdb_org_api = influxdb_client.OrganizationsApi(client)
 
